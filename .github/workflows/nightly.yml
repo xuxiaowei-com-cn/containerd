@@ -48,7 +48,7 @@ jobs:
             crossbuild-essential-s390x \
             crossbuild-essential-ppc64el \
             crossbuild-essential-riscv64 \
-            gcc-loongarch64-linux-gnu \
+            binutils-loongarch64-linux-gnu \
 
       - name: Build loong64
         env:
