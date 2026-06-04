@@ -55,7 +55,7 @@ jobs:
           GOOS: linux
           GOARCH: loong64
           CGO_ENABLED: 1
-          CC: loongarch64-linux-gnu-gcc
+          CC: loongarch64-linux-gnu-as
         run: |
           make binaries
           mv bin bin_loong64
