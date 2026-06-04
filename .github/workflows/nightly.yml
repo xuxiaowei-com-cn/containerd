@@ -54,7 +54,7 @@ jobs:
         env:
           GOOS: linux
           GOARCH: loong64
-          CGO_ENABLED: 1
+          CGO_ENABLED: 0
           CC: loongarch64-linux-gnu-as
         run: |
           make binaries
