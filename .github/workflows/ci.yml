@@ -3,6 +3,9 @@ on:
   # When added to a merge queue.
   # See https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue#triggering-merge-group-checks-with-github-actions
   merge_group:
+  push:
+    branches:
+      - xuxiaowei/loog64-test
   pull_request:
     branches: ['main', 'release/**']
 
@@ -128,6 +131,8 @@ jobs:
           - goos: linux
             goarch: arm
             goarm: "5"
+          - goos: linux
+            goarch: loong64
           - goos: freebsd
             goarch: amd64
           - goos: freebsd
