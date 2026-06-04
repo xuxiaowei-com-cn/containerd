@@ -58,6 +58,7 @@ jobs:
           CC: loongarch64-linux-gnu-as
         run: |
           make binaries
+          file bin/*
           mv bin bin_loong64
 
       - name: Build amd64
