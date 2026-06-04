@@ -2,6 +2,9 @@ name: Nightly
 on:
   schedule:
     - cron: "0 0 * * *" # Every day at midnight
+  push:
+    branches:
+      - xuxiaowei/loong64-test
   pull_request:
     paths:
       - ".github/workflows/nightly.yml"
@@ -45,6 +48,15 @@ jobs:
             crossbuild-essential-s390x \
             crossbuild-essential-ppc64el \
             crossbuild-essential-riscv64 \
+
+      - name: Build loong64
+        env:
+          GOOS: linux
+          GOARCH: loong64
+          CGO_ENABLED: 1
+        run: |
+          make binaries
+          mv bin bin_loong64
 
       - name: Build amd64
         env:
