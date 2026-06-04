@@ -5,7 +5,7 @@ on:
   merge_group:
   push:
     branches:
-      - xuxiaowei/loog64-test
+      - xuxiaowei/loong64-test
   pull_request:
     branches: ['main', 'release/**']
 
